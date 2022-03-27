@@ -21,7 +21,7 @@ a {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1110px;
     margin: auto;
 }
 
@@ -62,12 +62,18 @@ a {
 
 .btn {
     background: #FB9475;
-    border-radius: 24px;
-    padding: 17px 30px;
+    border-radius: 17px;
+    padding: 10px 20px;
     border-style: none;
     color: #FFFFFF;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.btn_large {
     font-size: 14px;
-    font-weight: 400;
+    padding: 17px 30px;
+    border-radius: 24px;
 }
 
 .navigation__list {
@@ -141,7 +147,7 @@ a {
 }
 
 
-/* TODO: разобраться с размещением изображения в header */
+/* TODO: разобраться с размещением изображения в header__girl */
 .header__girl {
     width: 472px;
     height: 472px;
@@ -325,4 +331,36 @@ a {
 
 .feature__description_master {
     max-width: 263px;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 48px 30px;
+}
+
+.service__item {
+    max-width: 350px;
+}
+
+.service-img {
+    width: 350px;
+    height: 180px;
+    border-radius: 8px;
+    background: url('./img/service_bg.png');
+    margin-bottom: 20px;
+}
+
+.service__header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.service__description {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 16px;
 }
