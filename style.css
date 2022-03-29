@@ -400,8 +400,93 @@ a {
     color: #00BF78;
 }
 
-.column {
+.prices__column {
     display: flex;
     flex-direction: column;
     row-gap: 32px;
+}
+
+.masters__photos {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.masters__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 24px;
+}
+
+.master {
+    max-width: 255px;
+}
+
+.master__img {
+    width: 255px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    margin: 0 0 20px;
+}
+
+.master__img img {
+    object-fit: cover;
+}
+
+.master__name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.master__position {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.master__exp {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.master__img::before {
+    background: #000;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    z-index: 3;
+    transition: 0.15s;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.master__img::after {
+    content: 'Записаться к мастеру';
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+    z-index: 3;
+    position: absolute;
+    top: 133px;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.master__img:hover::before {
+    opacity: 0.5;
+}
+
+.master__img:hover::after {
+    visibility: visible;
 }
