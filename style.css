@@ -146,16 +146,18 @@ a {
     margin-bottom: 16px;
 }
 
-
-/* TODO: разобраться с размещением изображения в header__girl */
 .header__girl {
     width: 472px;
     height: 472px;
     border-radius: 50%;
     background: #FB9475;
     position: absolute;
-    right: 64px;
+    right: 96px;
     bottom: -80px;
+}
+
+.header__girl img {
+    transform: translate(-48px, -110px);
 }
 
 .footer .container {
