@@ -1,0 +1,19 @@
+{
+  "name": "beautyworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bokarevbs/BeautyWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bokarevbs/BeautyWorld/issues"
+  },
+  "homepage": "https://github.com/bokarevbs/BeautyWorld#readme"
+}
