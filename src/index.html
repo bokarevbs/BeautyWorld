@@ -346,20 +346,43 @@
                 </div>
             </section>
 
-            <section class="contacts">
-                <div class="container">
-                    <div class="contacts__header">
-                        <h2 class="contacts__title">Контакты</h2>
+            <section class="section section_modified section_bg">
+                <div class="container container_modified">
+                    <div class="contacts">
+                        <div class="contacts__header">
+                            <h2 class="contacts__title">Контакты</h2>
+                        </div>
+                        <div class="contacts__body">
+                            <p class="contacts__address">Томск, проспект Ленина, дом 13</p>
+                            <p class="contacts__phone">8 (499) 686-17-62</p>
+                            <a href="mailto:info@more-krasoty.ru" class="contacts__email">info@more-krasoty.ru</a>
+                            <p class="contacts__text">Мы в социальных сетях</p>
+                            <ul class="social social_horizontal">
+                                <li><a href="#"><img src="./img/vk.svg" alt="Vk"></a></li>
+                                <li><a href="#"><img src="./img/instagram.svg" alt="Instagram"></a></li>
+                                <li><a href="#"><img src="./img/youtube.svg" alt="YouTube"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="contacts__body">
-                        <p class="address">Томск, проспект Ленина, дом 13</p>
-                        <p class="phone">8 (499) 686-17-62</p>
-                        <a href="mailto:info@more-krasoty.ru" class="mail-link">info@more-krasoty.ru</a>
-                        <ul class="social social_horizontal">
-
-                        </ul>
-                    </div>
-                    <div class="contacts_form"></div>
+                    
+                    <form name="enroll">
+                        <fieldset class="enroll-form">
+                            <h3 class="enroll-form__title">
+                                Быстрая запись
+                            </h3>
+                            <p class="enroll-form__text">
+                                Наш менеджер перезвонит в течение нескольких минут, 
+                                уточнит подробности и согласует время.
+                            </p>
+                            <input type="text" id="name" name="name" placeholder="Ваше имя">
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                            <button class="btn btn_largest">Записаться</button>
+                            <p class="enroll-form__text enroll-form__text_small">
+                                Нажимая на кнопку вы соглашаетесь с 
+                                <a href="#" class="enroll-form__personal">обработкой персональных данных</a>
+                            </p>
+                        </fieldset>
+                    </form>
                 </div>
             </section>
         </main>

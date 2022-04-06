@@ -70,6 +70,10 @@ a {
     font-size: 12px;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn_large {
     font-size: 14px;
     padding: 17px 30px;
@@ -142,6 +146,14 @@ a {
     list-style: none;
 }
 
+.social_horizontal {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    transform: none;
+    top: 0;
+}
+
 .social li:not(:last-child) {
     margin-bottom: 16px;
 }
@@ -157,6 +169,7 @@ a {
 }
 
 .header__girl img {
+    position: relative;
     transform: translate(-48px, -110px);
 }
 
@@ -194,7 +207,7 @@ a {
 .policy {
     text-decoration: underline;
 }
-.section__header {
+.section__header, .contacts__header {
     margin: 0;
 }
 
@@ -202,7 +215,7 @@ a {
     margin-bottom: 100px;
 }
 
-.section__title {
+.section__title, .contacts__title {
     font-size: 48px;
     font-weight: 700;
     margin: 0 0 32px;
@@ -626,4 +639,98 @@ a {
 .slider-control:hover {
     background: #F8F6F7;
     cursor: pointer;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    width: 363px;
+    position: relative;
+    top: 38px;
+}
+
+.container_modified {
+    display: flex;
+    gap: 207px;
+}
+
+
+
+.section_modified {
+    padding: 40px 0;
+    margin-bottom: 0;
+}
+
+.contacts__address, .contacts__phone {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.contacts__phone {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 14px;
+}
+
+.contacts__email {
+    display: block;
+    margin: 0 0 32px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.contacts__text {
+    margin: 0 0 12px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.enroll-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 445px;
+    padding: 39px;
+    margin: 0;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.enroll-form__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px;
+    line-height: 14px;
+}
+
+.enroll-form__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 35px;
+}
+
+.enroll-form input {
+    height: 44px;
+    margin: 0 0 20px;
+    padding-left: 16px;
+}
+
+.btn_largest {
+    width: auto;
+    font-size: 14px;
+    padding: 17px 30px;
+    border-radius: 24px;
+    margin-bottom: 16px;
+}
+
+.enroll-form__text_small {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.enroll-form__personal {
+    text-decoration: underline;
 }
