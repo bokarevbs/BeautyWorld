@@ -661,6 +661,10 @@ a {
     margin-bottom: 0;
 }
 
+.section_modified a {
+    text-decoration: underline;
+}
+
 .contacts__address, .contacts__phone {
     margin: 0 0 20px;
     font-size: 16px;
@@ -729,8 +733,4 @@ a {
 .enroll-form__text_small {
     font-size: 12px;
     font-weight: 300;
-}
-
-.enroll-form__personal {
-    text-decoration: underline;
 }
