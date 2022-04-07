@@ -29,6 +29,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 120px;
+
+    @include _768() {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .logo {
@@ -65,8 +70,6 @@
 .btn:hover {
     cursor: pointer;
 }
-
-.btn
 
 .navigation__list, .prices-navigation__list {
     list-style: none;
@@ -219,8 +222,6 @@
         max-width: 569px;
     }
 }
-
-.about
 
 .paragraph {
     line-height: 26px;
