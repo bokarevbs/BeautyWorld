@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -311,27 +314,35 @@
                     <div class="section__header section__header_controlled">
                         <h2 class="section__title">Наши работы</h2>
                         <div class="section__controls">
-                            <button class="slider-control">←</button>
-                            <button class="slider-control">→</button>
+                            <button class="prev-control">←</button>
+                            <button class="next-control">→</button>
                         </div>
                     </div>
                     <div class="section__body">
                         <div class="portfolio">
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="./img/1.png" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href='./img/1.png'><img src="./img/1.png" alt=""></a>
                             </div>
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="./img/2.png" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/2.png"><img src="./img/2.png" alt=""></a>
                             </div>
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="https://fashionhot.ru/wp-content/uploads/2017/06/Pricheski-dlya-devushek-5-7.jpg" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/2.png"><img src="./img/2.png" alt=""></a>
                             </div>
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="./img/4.png" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/4.png"><img src="./img/4.png" alt=""></a>
+                            </div>
+                            <div class="portfolio__item">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/1.png"><img src="./img/1.png" alt=""></a>
+                            </div>
+                            <div class="portfolio__item">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/1.png"><img src="./img/1.png" alt=""></a>
                             </div>
                         </div>
                         <div class="brands">
@@ -417,5 +428,21 @@
             </div>
         </footer>
     </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.portfolio').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: '.prev-control',
+                nextArrow: '.next-control'
+            });
+        });
+    </script>
 </body>
 </html>

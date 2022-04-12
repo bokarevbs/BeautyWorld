@@ -519,7 +519,7 @@
         border-radius: 8px;
         overflow: hidden;
         position: relative;
-        display: flex;
+        padding: 0 15px;
     }
 
     &__overlay {
@@ -539,51 +539,52 @@
 }
 
 .portfolio__item img {
+    width: 100%;
     object-fit: cover;
 }
 
-.portfolio__item::before {
-    content: '';
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    top: 149px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url('../img/zoom.svg') no-repeat center;
-    z-index: 4;
-    visibility: hidden;
-}
+// .portfolio__item::before {
+//     content: '';
+//     position: absolute;
+//     width: 48px;
+//     height: 48px;
+//     top: 149px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     background: url('../img/zoom.svg') no-repeat center;
+//     z-index: 4;
+//     visibility: hidden;
+// }
 
-.portfolio__item::after {
-    content: 'Увеличить';
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    z-index: 3;
-    top: 205px;
-    left: 0;
-    color: #FFFFFF;
-    visibility: hidden;
-}
+// .portfolio__item::after {
+//     content: 'Увеличить';
+//     font-size: 14px;
+//     font-weight: 500;
+//     line-height: 17px;
+//     position: absolute;
+//     width: 100%;
+//     text-align: center;
+//     z-index: 3;
+//     top: 205px;
+//     left: 0;
+//     color: #FFFFFF;
+//     visibility: hidden;
+// }
 
-.portfolio__item:hover {
-    transform: scale(1.1);
-    transition: 0.15s;
-    cursor: pointer;
-}
+// .portfolio__item:hover {
+//     transform: scale(1.1);
+//     transition: 0.15s;
+//     cursor: pointer;
+// }
 
-.portfolio__overlay:hover {
-    opacity: 0.5;
-}
+// .portfolio__overlay:hover {
+//     opacity: 0.5;
+// }
 
-.portfolio__item:hover::before, 
-.portfolio__item:hover::after {
-    visibility: visible;
-}
+// .portfolio__item:hover::before, 
+// .portfolio__item:hover::after {
+//     visibility: visible;
+// }
 
 .brands {
     max-width: 1110px;
@@ -617,7 +618,7 @@
     margin-top: 10px;
 }
 
-.slider-control {
+.prev-control, .next-control {
     border: none;
     background: none;
     font-size: 24px;
@@ -627,7 +628,7 @@
     height: 40px;
 }
 
-.slider-control:hover {
+.prev-control:hover, .next-control:hover {
     background: #F8F6F7;
     cursor: pointer;
 }
