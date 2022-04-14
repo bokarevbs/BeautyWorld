@@ -29,11 +29,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 120px;
-
-    @include _768() {
-        flex-direction: column;
-        gap: 30px;
-    }
 }
 
 .logo {
@@ -78,7 +73,11 @@
     display: flex;
 }
 
-.navigation__item, .prices-navigation__item:not(:last-child) {
+.navigation__item:not(:last-child) {
+    margin-right: 28px;
+}
+
+.prices-navigation__item:not(:last-child) {
     margin-right: 28px;
 }
 
@@ -716,3 +715,5 @@
         font-weight: 300;
     }
 }
+
+@import './media';

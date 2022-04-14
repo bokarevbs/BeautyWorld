@@ -19,11 +19,15 @@
     <div class="wrapper">
         <header class="header">
             <div class="container">
+                <div class="header__menu-burger">
+                    <span></span>
+                </div>
                 <div class="header-top">
+                    
                     <a href="/" class="logo">Мир красоты</a>
-                    <nav class="navigation">
+                    <nav class="navigation header__nav">
                         <ul class="navigation__list">
-                            <li class="navigation__item"><a class="navigation__link" href="#">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#prices-service">Услуги и цены</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="#">Мастера</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="#">Наши работы</a></li>
                             <li class="navigation__item"><a class="navigation__link" href="#">О нас</a></li>
@@ -174,7 +178,7 @@
             <section class="section">
                 <div class="container">
                     <div class="section__header">
-                        <h2 class="section__title">Услуги и цены</h2>
+                        <h2 class="section__title" id="prices-service">Услуги и цены</h2>
                     </div>
                     <div class="section__body">
                         <div class="prices">
@@ -417,7 +421,7 @@
                     <a class="policy" href="#">Политика конфиденциальности</a>
                 </div>
                 
-                <nav class="navigation">
+                <nav class="navigation footer__nav">
                     <ul class="navigation__list navigation__list_footer">
                         <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#">Услуги и цены</a></li>
                         <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#">Мастера</a></li>
@@ -442,6 +446,18 @@
                 prevArrow: '.prev-control',
                 nextArrow: '.next-control'
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.header__menu-burger').click(function() {
+                $('.header__menu-burger').toggleClass('open-menu');
+                $('.header__nav').toggleClass('open-menu');
+            });
+        });
+        $(".header__nav a").click(function(){
+            $('.header__menu-burger.open-menu').removeClass("open-menu");
+            $(".header__nav.open-menu").removeClass("open-menu");
         });
     </script>
 </body>
