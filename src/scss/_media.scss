@@ -14,6 +14,30 @@
         margin: auto;
     }
 
+    .hero {
+        margin: 0 5px;
+    }
+
+    .hero h1 {
+        text-align: center;
+    }
+
+    .header__girl {
+        opacity: 0.5;
+    }
+
+    .btn_large {
+        transform: translate(50%);
+    }
+
+    .hero p {
+        text-align: center;
+    }
+
+    .social {
+        display: none;
+    }
+
     .header__nav {
         position: absolute;
         top: 60px;
