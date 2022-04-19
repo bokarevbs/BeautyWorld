@@ -199,6 +199,63 @@
         align-items: center;
         gap: 30px;
     }
+
+    .prices {
+        display: flex;
+        padding: 10px;
+    }
+
+    .prices-navigation {
+        margin-bottom: 47px;
+        width: 35%;
+    }
+
+    .prices-navigation__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .prices__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 65%;
+    }
+
+    .prices__column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .prices__item {
+        width: 100%;
+    }
+
+    .prices__title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 8px;
+    }
+    
+    .prices__subtitle {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 4px;
+    }
+
+    .prices__value {
+        color: #00BF78;
+        font-size: 12px;
+    }
+
+    .prices__desription {
+        width: 80%;
+    }
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
