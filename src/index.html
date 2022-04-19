@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beauty World</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper">
@@ -44,7 +46,9 @@
                 </ul>
 
                 <div class="header__girl">
+                    <img src="./img/girl.png" alt="">
                 </div>
+
             </div>
         </header>
 
@@ -109,7 +113,9 @@
                     <div class="section__body">
                         <div class="services">
                             <div class="service__item">
-                                <div class="service-img"></div>
+                                <div class="service__img">
+                                    <img src="./img/service_bg.png">
+                                </div>
                                 <p class="service__header">Маникюр</p>
                                 <p class="service__description">
                                     Аппаратный, комбинированный или классический.
@@ -117,7 +123,9 @@
                                 <button class="btn">Записаться</button>
                             </div>
                             <div class="service__item">
-                                <div class="service-img"></div>
+                                <div class="service__img">
+                                    <img src="./img/service_bg.png">
+                                </div>
                                 <p class="service__header">Покрытие гель-лак</p>
                                 <p class="service__description">
                                     Гель-лак наносится в несколько слоев с использование базы и топа. Каждый слой полимеризуется в LED-лампе.
@@ -125,7 +133,9 @@
                                 <button class="btn">Записаться</button>
                             </div>
                             <div class="service__item">
-                                <div class="service-img"></div>
+                                <div class="service__img">
+                                    <img src="./img/service_bg.png">
+                                </div>
                                 <p class="service__header">Бразильский маникюр</p>
                                 <p class="service__description">
                                     Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.
@@ -134,7 +144,9 @@
                             </div>
                           
                         <div class="service__item">
-                            <div class="service-img"></div>
+                            <div class="service__img">
+                                <img src="./img/service_bg.png">
+                            </div>
                             <p class="service__header">Педикюр</p>
                             <p class="service__description">
                                 Аппаратный, комбинированный или классический.
@@ -142,7 +154,9 @@
                             <button class="btn">Записаться</button>
                         </div>
                         <div class="service__item">
-                            <div class="service-img"></div>
+                            <div class="service__img">
+                                <img src="./img/service_bg.png">
+                            </div>
                             <p class="service__header">Парафинотерапия</p>
                             <p class="service__description">
                                 Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.
@@ -341,6 +355,46 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="section section_modified section_bg">
+                <div class="container container_modified">
+                    <div class="contacts">
+                        <div class="contacts__header">
+                            <h2 class="contacts__title">Контакты</h2>
+                        </div>
+                        <div class="contacts__body">
+                            <p class="contacts__address">Томск, проспект Ленина, дом 13</p>
+                            <p class="contacts__phone">8 (499) 686-17-62</p>
+                            <a href="mailto:info@more-krasoty.ru" class="contacts__email">info@more-krasoty.ru</a>
+                            <p class="contacts__text">Мы в социальных сетях</p>
+                            <ul class="social social_horizontal">
+                                <li><a href="#"><img src="./img/vk.svg" alt="Vk"></a></li>
+                                <li><a href="#"><img src="./img/instagram.svg" alt="Instagram"></a></li>
+                                <li><a href="#"><img src="./img/youtube.svg" alt="YouTube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <form name="enroll">
+                        <fieldset class="enroll-form">
+                            <h3 class="enroll-form__title">
+                                Быстрая запись
+                            </h3>
+                            <p class="enroll-form__text">
+                                Наш менеджер перезвонит в течение нескольких минут, 
+                                уточнит подробности и согласует время.
+                            </p>
+                            <input type="text" class="enroll-form__input" id="name" name="name" placeholder="Ваше имя">
+                            <input type="tel" class="enroll-form__input" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                            <button class="btn btn_largest">Записаться</button>
+                            <p class="enroll-form__text enroll-form__text_small">
+                                Нажимая на кнопку вы соглашаетесь с 
+                                <a href="#">обработкой персональных данных</a>
+                            </p>
+                        </fieldset>
+                    </form>
                 </div>
             </section>
         </main>
