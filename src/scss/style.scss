@@ -245,11 +245,11 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    display: flex;
 }
 
 .about__video img {
     object-fit: cover;
+    width: 100%;
 }
 
 .video-overlay {

@@ -15,6 +15,10 @@
     }
 
     .hero {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 0 5px;
     }
 
@@ -24,10 +28,6 @@
 
     .header__girl {
         opacity: 0.5;
-    }
-
-    .btn_large {
-        transform: translate(50%);
     }
 
     .hero p {
@@ -40,15 +40,16 @@
 
     .header__nav {
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 0;
-        background: rgb(245, 246, 246);
+        background: #fff;
         box-shadow: #ccc;
         width: 100%;
         box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
         left: -100%;
         transition: all 0.4s ease;
         padding: 10px;
+        z-index: 3;
     }
 
     .header__nav.open-menu {
@@ -115,7 +116,75 @@
         transition: 0.4s;
     }
 
+    .about {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        margin-bottom: 100px;
     
+        &__text {
+            max-width: 569px;
+        }
+    }
+    
+    .paragraph {
+        line-height: 26px;
+        margin-top: 0;
+        margin-bottom: 16px;
+        text-align: justify;
+    }
+    
+    .paragraph_large {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .expand-link {
+        display: inline-block;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .about__video {
+        width: 400px;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    
+        &__item {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    .feature__header {
+        margin-top: 28px;
+        margin-bottom: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .feature__description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        margin: 0;
+    }
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
