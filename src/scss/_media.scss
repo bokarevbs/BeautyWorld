@@ -186,11 +186,12 @@
         margin: 0;
     }
 
-    .section__title, .contacts__title {
+    .section__title {
         font-size: 48px;
         font-weight: 700;
         margin: 0 0 32px;
         text-align: center;
+        width: 100%;
     }
 
     .services {
@@ -273,6 +274,20 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .section__header_controlled {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .brands {
+        margin: 0;
+    }
+
+    .brands__list {
+        flex-wrap: wrap;
     }
 } 
 /* Extra Small Devices, Phones */ 
