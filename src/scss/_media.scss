@@ -34,7 +34,7 @@
         text-align: center;
     }
 
-    .social {
+    .header__social {
         display: none;
     }
 
@@ -288,6 +288,16 @@
 
     .brands__list {
         flex-wrap: wrap;
+    }
+
+    .container_modified {
+        flex-direction: column;
+        padding: 10px;
+        gap: 80px;
+    }
+
+    .contacts__header {
+        text-align: center;
     }
 } 
 /* Extra Small Devices, Phones */ 
