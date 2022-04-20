@@ -714,4 +714,10 @@
     }
 }
 
+.footer__body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 @import './media';

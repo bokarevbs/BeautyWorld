@@ -299,6 +299,22 @@
     .contacts__header {
         text-align: center;
     }
+
+    .footer__body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer__navigation-list {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .navigation__item {
+            margin: 0;
+        }
+    }
 } 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) { 
