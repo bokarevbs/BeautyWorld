@@ -88,8 +88,14 @@
     transition: .15s color;
 }
 
+.prices-navigation__link.active {
+    border-bottom: 2px solid currentColor;
+    color: #00BF78;
+}
+
 .navigation a:hover, .prices-navigation a:hover {
     color: #00BF78;
+    cursor: pointer;
 }
 
 .phone-info {
@@ -512,27 +518,24 @@
 
     &__item {
         width: 338px;
-        height: 338px;
         border-radius: 8px;
         overflow: hidden;
         position: relative;
-        padding: 0 15px;
+        padding: 15px 15px;
     }
 
-    &__overlay {
-        background: #000;
-        opacity: 0;
-        content: '';
-        position: absolute;
-        z-index: 3;
-        transition: 0.15s;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-    }
-
-    
+    // &__overlay {
+    //     background: #000;
+    //     opacity: 0;
+    //     content: '';
+    //     position: absolute;
+    //     z-index: 3;
+    //     transition: 0.15s;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     bottom: 0;
+    // }
 }
 
 .portfolio__item img {
@@ -541,16 +544,26 @@
 }
 
 // .portfolio__item::before {
-//     content: '';
-//     position: absolute;
-//     width: 48px;
-//     height: 48px;
-//     top: 149px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     background: url('../img/zoom.svg') no-repeat center;
-//     z-index: 4;
-//     visibility: hidden;
+//     // content: '';
+//     // position: absolute;
+//     // width: 48px;
+//     // height: 48px;
+//     // top: 149px;
+//     // left: 50%;
+//     // transform: translateX(-50%);
+//     // background: url('../img/zoom.svg') no-repeat center;
+//     // z-index: 4;
+//     // visibility: hidden;
+//     background: #000;
+//         opacity: 0;
+//         content: '';
+//         position: absolute;
+//         z-index: 3;
+//         // transition: 0.15s;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
 // }
 
 // .portfolio__item::after {
@@ -568,9 +581,9 @@
 //     visibility: hidden;
 // }
 
-// .portfolio__item:hover {
+// .portfolio__item:hover img {
 //     transform: scale(1.1);
-//     transition: 0.15s;
+//     transition: 0.2s;
 //     cursor: pointer;
 // }
 
@@ -578,7 +591,10 @@
 //     opacity: 0.5;
 // }
 
-// .portfolio__item:hover::before, 
+// .portfolio__item:hover::before {
+//     opacity: 0.5;
+// }
+
 // .portfolio__item:hover::after {
 //     visibility: visible;
 // }
