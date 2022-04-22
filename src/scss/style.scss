@@ -29,11 +29,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 120px;
-
-    @include _768() {
-        flex-direction: column;
-        gap: 30px;
-    }
 }
 
 .logo {
@@ -78,7 +73,11 @@
     display: flex;
 }
 
-.navigation__item, .prices-navigation__item:not(:last-child) {
+.navigation__item:not(:last-child) {
+    margin-right: 28px;
+}
+
+.prices-navigation__item:not(:last-child) {
     margin-right: 28px;
 }
 
@@ -89,8 +88,14 @@
     transition: .15s color;
 }
 
+.prices-navigation__link.active {
+    border-bottom: 2px solid currentColor;
+    color: #00BF78;
+}
+
 .navigation a:hover, .prices-navigation a:hover {
     color: #00BF78;
+    cursor: pointer;
 }
 
 .phone-info {
@@ -246,11 +251,11 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    display: flex;
 }
 
 .about__video img {
     object-fit: cover;
+    width: 100%;
 }
 
 .video-overlay {
@@ -341,7 +346,6 @@
 
 .services {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 48px 30px;
 }
@@ -374,7 +378,6 @@
 
 .prices__list {
     display: flex;
-    flex-direction: row;
     gap: 125px;
 }
 
@@ -515,75 +518,86 @@
 
     &__item {
         width: 338px;
-        height: 338px;
         border-radius: 8px;
         overflow: hidden;
         position: relative;
-        display: flex;
+        padding: 15px 15px;
     }
 
-    &__overlay {
-        background: #000;
-        opacity: 0;
-        content: '';
-        position: absolute;
-        z-index: 3;
-        transition: 0.15s;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-    }
-
-    
+    // &__overlay {
+    //     background: #000;
+    //     opacity: 0;
+    //     content: '';
+    //     position: absolute;
+    //     z-index: 3;
+    //     transition: 0.15s;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     bottom: 0;
+    // }
 }
 
 .portfolio__item img {
+    width: 100%;
     object-fit: cover;
 }
 
-.portfolio__item::before {
-    content: '';
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    top: 149px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: url('../img/zoom.svg') no-repeat center;
-    z-index: 4;
-    visibility: hidden;
-}
+// .portfolio__item::before {
+//     // content: '';
+//     // position: absolute;
+//     // width: 48px;
+//     // height: 48px;
+//     // top: 149px;
+//     // left: 50%;
+//     // transform: translateX(-50%);
+//     // background: url('../img/zoom.svg') no-repeat center;
+//     // z-index: 4;
+//     // visibility: hidden;
+//     background: #000;
+//         opacity: 0;
+//         content: '';
+//         position: absolute;
+//         z-index: 3;
+//         // transition: 0.15s;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+// }
 
-.portfolio__item::after {
-    content: 'Увеличить';
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    z-index: 3;
-    top: 205px;
-    left: 0;
-    color: #FFFFFF;
-    visibility: hidden;
-}
+// .portfolio__item::after {
+//     content: 'Увеличить';
+//     font-size: 14px;
+//     font-weight: 500;
+//     line-height: 17px;
+//     position: absolute;
+//     width: 100%;
+//     text-align: center;
+//     z-index: 3;
+//     top: 205px;
+//     left: 0;
+//     color: #FFFFFF;
+//     visibility: hidden;
+// }
 
-.portfolio__item:hover {
-    transform: scale(1.1);
-    transition: 0.15s;
-    cursor: pointer;
-}
+// .portfolio__item:hover img {
+//     transform: scale(1.1);
+//     transition: 0.2s;
+//     cursor: pointer;
+// }
 
-.portfolio__overlay:hover {
-    opacity: 0.5;
-}
+// .portfolio__overlay:hover {
+//     opacity: 0.5;
+// }
 
-.portfolio__item:hover::before, 
-.portfolio__item:hover::after {
-    visibility: visible;
-}
+// .portfolio__item:hover::before {
+//     opacity: 0.5;
+// }
+
+// .portfolio__item:hover::after {
+//     visibility: visible;
+// }
 
 .brands {
     max-width: 1110px;
@@ -617,7 +631,7 @@
     margin-top: 10px;
 }
 
-.slider-control {
+.prev-control, .next-control {
     border: none;
     background: none;
     font-size: 24px;
@@ -627,7 +641,7 @@
     height: 40px;
 }
 
-.slider-control:hover {
+.prev-control:hover, .next-control:hover {
     background: #F8F6F7;
     cursor: pointer;
 }
@@ -715,3 +729,11 @@
         font-weight: 300;
     }
 }
+
+.footer__body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@import './media';

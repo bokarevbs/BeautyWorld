@@ -14,14 +14,306 @@
         margin: auto;
     }
 
+    .hero {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 5px;
+    }
+
+    .hero h1 {
+        text-align: center;
+    }
+
+    .header__girl {
+        opacity: 0.5;
+    }
+
+    .hero p {
+        text-align: center;
+    }
+
+    .header__social {
+        display: none;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #fff;
+        box-shadow: #ccc;
+        width: 100%;
+        box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+        left: -100%;
+        transition: all 0.4s ease;
+        padding: 10px;
+        z-index: 3;
+    }
+
+    .header__nav.open-menu {
+        left: 0;
+    }
+
     .navigation__list {
+        flex-direction: column;
+        overflow: auto;
+        align-items: center;
+    }
+    
+    .navigation__item:not(:last-child) {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .header__menu-burger {
+        position: relative;
+        width: 40px;
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+    }
+
+    .header__menu-burger span, .header__menu-burger:after, .header__menu-burger:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #515758;
+        margin: 0 auto;
+    }
+    .header__menu-burger span{
+        top: 16px;
+    }
+    .header__menu-burger:after, .header__menu-burger:before{
+        content: '';
+    }
+    .header__menu-burger:after{
+        bottom: 5px;
+    }
+    .header__menu-burger:before{
+        top: 5px;
+    }
+
+    .header__menu-burger.open-menu span {
+        opacity:0; 
+        transition: 0.5s; 
+    }
+    .header__menu-burger.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+    .header__menu-burger.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        margin-bottom: 100px;
+    
+        &__text {
+            max-width: 569px;
+        }
+    }
+    
+    .paragraph {
+        line-height: 26px;
+        margin-top: 0;
+        margin-bottom: 16px;
+        text-align: justify;
+    }
+    
+    .paragraph_large {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .expand-link {
+        display: inline-block;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .about__video {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    
+        &__item {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    .feature__header {
+        margin-top: 28px;
+        margin-bottom: 12px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .feature__description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .section__title {
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0 0 32px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .prices {
+        display: flex;
+        padding: 10px;
+    }
+
+    .prices-navigation {
+        margin-bottom: 47px;
+        width: 35%;
+    }
+
+    .prices-navigation__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .prices__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 65%;
+    }
+
+    .prices__column {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .prices__item {
+        width: 100%;
+    }
+
+    .prices__title {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0 0 8px;
+    }
+    
+    .prices__subtitle {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 0 0 4px;
+    }
+
+    .prices__value {
+        color: #00BF78;
+        font-size: 12px;
+    }
+
+    .prices__desription {
+        width: 80%;
+    }
+
+    .masters__subtitle {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0 0 24px;
+        text-align: center;
+    }
+
+    .masters__photos {
         flex-direction: column;
         align-items: center;
     }
 
-    .navigation__item:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .master {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section__header_controlled {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .brands {
+        margin: 0;
+    }
+
+    .brands__list {
+        flex-wrap: wrap;
+    }
+
+    .container_modified {
+        flex-direction: column;
+        padding: 10px;
+        gap: 80px;
+    }
+
+    .contacts__header {
+        text-align: center;
+    }
+
+    .footer__body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer__navigation-list {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .navigation__item {
+            margin: 0;
+        }
     }
 } 
 /* Extra Small Devices, Phones */ 

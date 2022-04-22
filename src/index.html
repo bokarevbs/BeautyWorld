@@ -9,22 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="container">
+                <div class="header__menu-burger">
+                    <span></span>
+                </div>
                 <div class="header-top">
+                    
                     <a href="/" class="logo">Мир красоты</a>
-                    <nav class="navigation">
+                    <nav class="navigation header__nav">
                         <ul class="navigation__list">
-                            <li class="navigation__item"><a class="navigation__link" href="#">Услуги и цены</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#">Мастера</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#">Наши работы</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#">О нас</a></li>
-                            <li class="navigation__item"><a class="navigation__link" href="#">Контакты</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#uslugi">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#mastera">Мастера</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#nashi raboty">Наши работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#o salone">О нас</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#kontakty">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="phone-info">
@@ -39,7 +46,7 @@
                     <button class="btn btn_large">Записаться онлайн</button>
                 </div>
 
-                <ul class="social">
+                <ul class="social header__social">
                     <li><a href="#"><img src="./img/vk.svg" alt="Vk"></a></li>
                     <li><a href="#"><img src="./img/instagram.svg" alt="Instagram"></a></li>
                     <li><a href="#"><img src="./img/youtube.svg" alt="YouTube"></a></li>
@@ -53,7 +60,7 @@
         </header>
 
         <main class="main">
-            <section class="section">
+            <section class="section" id="o salone">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">О салоне</h2>
@@ -168,7 +175,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="uslugi">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">Услуги и цены</h2>
@@ -177,16 +184,16 @@
                         <div class="prices">
                             <div class="prices-navigation">
                                 <ul class="prices-navigation__list">
-                                    <li class="prices-navigation__item"><a class="prices-navigation__link" href="">Стрижка и укладка</a></li>
-                                    <li class="prices-navigation__item"><a class="prices-navigation__link" href="#">Косметология</a></li>
-                                    <li class="prices-navigation__item"><a class="prices-navigation__link" href="#">Маникюр и педикюр</a></li>
-                                    <li class="prices-navigation__item"><a class="prices-navigation__link" href="#">Макияж</a></li>
-                                    <li class="prices-navigation__item"><a class="prices-navigation__link" href="#">Брови и ресницы</a></li>
-                                    <li class="prices-navigation__item"><a class="prices-navigation__link" href="#">Массаж</a></li>
+                                    <li class="prices-navigation__item"><a class="prices-navigation__link" onclick="openTab(event, 'Haircut')" id="defaultOpen">Стрижка и укладка</a></li>
+                                    <li class="prices-navigation__item"><a class="prices-navigation__link" onclick="openTab(event, 'Cosmetics')">Косметология</a></li>
+                                    <li class="prices-navigation__item"><a class="prices-navigation__link" onclick="openTab(event, 'Manicure')">Маникюр и педикюр</a></li>
+                                    <li class="prices-navigation__item"><a class="prices-navigation__link" onclick="openTab(event, 'Makeup')">Макияж</a></li>
+                                    <li class="prices-navigation__item"><a class="prices-navigation__link" onclick="openTab(event, 'Eyebrows')">Брови и ресницы</a></li>
+                                    <li class="prices-navigation__item"><a class="prices-navigation__link" onclick="openTab(event, 'Massage')">Массаж</a></li>
                                 </ul>
                             </div>
 
-                            <div class="prices__list">
+                            <div class="prices__list" id="Haircut">
                                 <div class="prices__column">
                                     <div class="prices__item">
                                         <div class="prices__desription">
@@ -248,16 +255,53 @@
                                         <div class="prices__value">3000 ₽</div>
                                     </div>
                                 </div>
-
-                               
+                            </div>  
+                            <div class="prices__list" id="Cosmetics">
+                                <p style="color: #004455">
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua.
+                                </p>
+                            </div> 
+                            <div class="prices__list" id="Manicure">
+                                <p style="color: #115599">
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua.
+                                </p>
                             </div>
+                            <div class="prices__list" id="Makeup">
+                                <p style="color: #007743">
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <div class="prices__list" id="Eyebrows">
+                                <p style="color: #815634">
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                            <div class="prices__list" id="Massage">
+                                <p style="color: #00ffff">
+                                    Lorem ipsum dolor sit amet, 
+                                    consectetur adipiscing elit, 
+                                    sed do eiusmod tempor incididunt 
+                                    ut labore et dolore magna aliqua.
+                                </p>
+                            </div>                      
                         </div>
-                        
                     </div>
                 </div>
             </section>
 
-            <section class="section section_bg">
+            <section class="section section_bg" id="mastera">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="section__title">Мастера</h2>
@@ -306,32 +350,40 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="nashi raboty">
                 <div class="container container_expanded">
                     <div class="section__header section__header_controlled">
                         <h2 class="section__title">Наши работы</h2>
                         <div class="section__controls">
-                            <button class="slider-control">←</button>
-                            <button class="slider-control">→</button>
+                            <button class="prev-control">←</button>
+                            <button class="next-control">→</button>
                         </div>
                     </div>
                     <div class="section__body">
                         <div class="portfolio">
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="./img/1.png" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href='./img/1.png'><img src="./img/1.png" alt=""></a>
                             </div>
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="./img/2.png" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/2.png"><img src="./img/2.png" alt=""></a>
                             </div>
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="https://fashionhot.ru/wp-content/uploads/2017/06/Pricheski-dlya-devushek-5-7.jpg" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/2.png"><img src="./img/2.png" alt=""></a>
                             </div>
                             <div class="portfolio__item">
-                                <div class="portfolio__overlay"></div>
-                                <img src="./img/4.png" alt="">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/4.png"><img src="./img/4.png" alt=""></a>
+                            </div>
+                            <div class="portfolio__item">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/1.png"><img src="./img/1.png" alt=""></a>
+                            </div>
+                            <div class="portfolio__item">
+                                <!-- <div class="portfolio__overlay"></div> -->
+                                <a data-fancybox="gallery" href="./img/1.png"><img src="./img/1.png" alt=""></a>
                             </div>
                         </div>
                         <div class="brands">
@@ -358,7 +410,7 @@
                 </div>
             </section>
 
-            <section class="section section_modified section_bg">
+            <section class="section section_modified section_bg" id="kontakty">
                 <div class="container container_modified">
                     <div class="contacts">
                         <div class="contacts__header">
@@ -369,7 +421,7 @@
                             <p class="contacts__phone">8 (499) 686-17-62</p>
                             <a href="mailto:info@more-krasoty.ru" class="contacts__email">info@more-krasoty.ru</a>
                             <p class="contacts__text">Мы в социальных сетях</p>
-                            <ul class="social social_horizontal">
+                            <ul class="social footer__social social_horizontal">
                                 <li><a href="#"><img src="./img/vk.svg" alt="Vk"></a></li>
                                 <li><a href="#"><img src="./img/instagram.svg" alt="Instagram"></a></li>
                                 <li><a href="#"><img src="./img/youtube.svg" alt="YouTube"></a></li>
@@ -377,7 +429,7 @@
                         </div>
                     </div>
                     
-                    <form name="enroll">
+                    <form id="enroll">
                         <fieldset class="enroll-form">
                             <h3 class="enroll-form__title">
                                 Быстрая запись
@@ -386,12 +438,12 @@
                                 Наш менеджер перезвонит в течение нескольких минут, 
                                 уточнит подробности и согласует время.
                             </p>
-                            <input type="text" class="enroll-form__input" id="name" name="name" placeholder="Ваше имя">
-                            <input type="tel" class="enroll-form__input" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
-                            <button class="btn btn_largest">Записаться</button>
+                            <input type="text" class="enroll-form__input" name="name" placeholder="Ваше имя">
+                            <input type="tel" inputmode="tel" class="enroll-form__input" name="phone" placeholder="+7 (___) ___-__-__">
+                            <button class="btn btn_largest" type="submit">Записаться</button>
                             <p class="enroll-form__text enroll-form__text_small">
                                 Нажимая на кнопку вы соглашаетесь с 
-                                <a href="#">обработкой персональных данных</a>
+                                <a href="#" target="_blank">обработкой персональных данных</a>
                             </p>
                         </fieldset>
                     </form>
@@ -401,21 +453,81 @@
         
         <footer class="footer">
             <div class="container">
-                <div class="footer__content">
-                    <div class="footer__copyright">© 2020 «Море красоты»</div>
-                    <a class="policy" href="#">Политика конфиденциальности</a>
+                <div class="footer__body">
+                    <div class="footer__content">
+                        <div class="footer__copyright">© 2020 «Море красоты»</div>
+                        <a class="policy" href="#">Политика конфиденциальности</a>
+                    </div>
+                    
+                    <nav class="navigation footer__nav">
+                        <ul class="navigation__list footer__navigation-list navigation__list_footer">
+                            <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#uslugi">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#mastera">Мастера</a></li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#nashi raboty">Наши работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#kontakty">Контакты</a></li>
+                        </ul>
+                    </nav>
                 </div>
                 
-                <nav class="navigation">
-                    <ul class="navigation__list navigation__list_footer">
-                        <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#">Услуги и цены</a></li>
-                        <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#">Мастера</a></li>
-                        <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#">Наши работы</a></li>
-                        <li class="navigation__item"><a class="navigation__link navigation__link_footer" href="#">Контакты</a></li>
-                    </ul>
-                </nav>
             </div>
         </footer>
     </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.portfolio').slick({
+                slidesToShow: 4,
+                prevArrow: '.prev-control',
+                nextArrow: '.next-control',
+                swipeToSlide: true,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.header__menu-burger').click(function() {
+                $('.header__menu-burger').toggleClass('open-menu');
+                $('.header__nav').toggleClass('open-menu');
+            });
+        });
+        $(".header__nav a").click(function(){
+            $('.header__menu-burger.open-menu').removeClass("open-menu");
+            $(".header__nav.open-menu").removeClass("open-menu");
+        });
+    </script>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("prices__list");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("prices-navigation__link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+    <script src="./js/form-handler.js"></script>
 </body>
 </html>
